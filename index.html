@@ -4,17 +4,30 @@
     <meta charset="utf-8">
     <title>Jon Hurlock C.V.</title>
 	<style media="print" type="text/css">
+	@page  
+	{ 
+	    size: auto;   /* auto is the initial value */ 
+
+	    /* this affects the margin in the printer settings */ 
+	    margin-top: 22mm;
+		margin-bottom: 22mm;
+		margin-left: 20mm;
+		margin-right: 20mm;
+		
+	} 
+
 	body{
+		/* border:1px solid red; */
 		color:#000;
-		background-color: #fff;
+		background-color:#fff;
 		font-weight:300;
 		font-size:11px;
 		line-height:140%;
 		font-family:"HelveticaNeue-Light","Helvetica Neue Light", "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Lucida Grande", sans-serif;
 		-webkit-font-smoothing: antialiased;
 		text-rendering: optimizelegibility;
-		width:80%;
-		margin:50px 50px 50px 50px;
+		width:100%;
+		margin:auto;
 	}
 	h1, h2, h3, h4{
 		font-weight:300;
@@ -47,6 +60,19 @@
 	}
 	ul, li, a, a:link, a:hover, a:visited{
 		display:none;
+	}
+	ul.achievements{
+		margin:default;
+		margin-top:0px;
+		list-style-type:circle;
+		text-align:left;
+		display:block;
+	}
+	ul.achievements li{
+		display:list-item;
+		margin-left:default;
+		margin-right:default;
+		margin-top:10px;
 	}
 	</style>
 	<style media="screen" type="text/css">
@@ -104,6 +130,19 @@
 		margin-left:5px;
 		margin-right:5px;
 	}
+	ul.achievements{
+		margin:default;
+		margin-top:0px;
+		list-style-type:circle;
+		text-align:left;
+		display:default;
+	}
+	ul.achievements li{
+		display:default;
+		margin-left:default;
+		margin-right:default;
+		margin-top:10px;
+	}
 	a, a:link, a:hover, a:visited{
 		color:#fff;
 		text-decoration:none;
@@ -115,7 +154,11 @@
   </head>
   <body>
 	  <h1>Jon Hurlock</h1>
-	  <p class="contact_me">Twitter: <a href="http://www.twitter.com/jonhurlock">@jonhurlock</a> | Linkedin: <a href="http://linkedin.com/in/jonhurlock">jonhurlock</a></p>
+	  <p class="contact_me">
+
+		  Twitter: <a href="http://www.twitter.com/jonhurlock">@jonhurlock</a> | Linkedin: <a href="http://linkedin.com/in/jonhurlock">jonhurlock</a>
+
+	</p>
 	  <ul>
 		  <li><a href="#Employment">Employment</a></li>
 		  <li><a href="#Education">Education</a></li>
@@ -132,9 +175,22 @@
 	  <p class="employment_dates">January 2016 - Present, London United Kingdom</p>
 	  <p>In January 2016 I took on the combined role of Technical Product Manager and Team Lead at Lyst for the Data Science Team. I work alongside both data scientists and engineers as part of my team, whose objective at a high level is to answer questions regarding our data, exploring how we can leverage our data to better understand our customers, products and improve the overall Lyst experience. A majority of our work is concerned around recommendations, search, related products and several other parts of the website. Our main internal stake holders and the Web and Mobile based teams, though we happily work with other teams, to help benefit the business. As part of my role, I have to manage stakeholders, expectations, and set objectives and key results for our team.</p>
 	  <p>My duties as a Team Lead include holding regular one on one meetings with team members, managing retrospectives, any on-boarding for new team members as well as being responsible for the team's delivery.</p>
+	  <p>Notable Achievements whilst in post:</p>
+	  <ul class="achievements">
+		  <li>Increased daily CTR for searches by 26% (Relative) over a quarter, through algorithmic changes.</li>
+		  <li>Increased daily CTR for related products by 16.7% (Relative) over a quarter, through algorithmic changes.</li>
+		  <li>Automatic material classification system for products with over 90% accuracy.</li>
+		  <li>Created a bespoke microservice to automatically classify and perform moderation of items (97% accurate). Reducing internal costings and providing better accuracy that human moderators.</li>
+		  <li>Created a system which enables automatic tagging of products using their image representation.</li>
+	  </ul>
 	  <h3>Junior Product Manager: Analytics, <span class="employer">Lyst</span></h3>
 	  <p class="employment_dates">July 2015 - January 2016, London United Kingdom</p>
 	  <p>I joined Lyst as a junior product manager. I took on the role of PM for the analytics team, working alongside a team of 5 analysts, data scientists and engineers. Whilst in the analytics team, my team worked on major projects such as stabilising our data pipeline, ingesting new data sources, automatically detecting anomalous data as well as data quality alerting systems. The team also utilised their advanced analytical reporting capabilities to answer complex questions from across the business. As part of this role, I had stakeholders from across the business (Finance, Customer Care, Talent, Business Intelligence &amp; Strategy, SEO, Digital Marketing Team, Brand &amp; Comms, Partnerships, as well as several Engineering teams), most of the stakeholders, were non-technical, and from a range of positions in the company, from junior members all the way up to the CEO and CTO.</p>
+	  <p>Notable Achievements whilst in post:</p>
+	  <ul class="achievements">
+		  <li>Stabiling our internal data pipeline, increasing data accuracy and creating a SLA for data accuracy.</li>
+		  <li>Creating an anomaly detection microservice, alerting users across the business of any anomalous events occuring across a range of metrics.</li>
+	  </ul>
 	  <h3>Workshop Developer &amp; Deliverer, <span class="employer">Software Alliance Wales</span></h3>
 	  <p class="employment_dates">October 2014 - June 2015, Swansea United Kingdom</p>
 	  <p>I was employed as a Workshop Developer and Deliverer in Machine Learning and Data Analysis . My role was primarily concerned with training and teaching at all levels (Technical and non Technical). The purpose of the post was to develop and deliver cutting edge workshops and modules (courses) across Wales, specifically in the area of machine learning, data analysis and data mining. As part of this role I was awarded funding from the Higher Education Funding Council for Wales (HEFCW) to help establish strategic links between academia and businesses.</p>
@@ -148,8 +204,7 @@
 	  <h3>Developer, <span class="employer">Citys.info</span></h3>
 	  <p class="employment_dates">Summer 2006 &amp; Summer 2007, Swansea United Kingdom</p>
 	  <p>During the summers during my undergraduate degree I took up a part time job via a placement by the industrial liaison unit of the department of computer science.</p>
-	  <p>I was initially hired to be a CSS developer for a range of small sites. However, during my placement I was asked to write a bespoke PHP based content management along with another developer. The CMS implemented several APIs including Google Maps, Custom Search, Paypal as well as other APIs from third party content providers. The role involved creating a public front end for the site, as customer back-end for the site, as well as a local business back-end for the site. I played a key role in developing the both the front and back-end of the site, offering local businesses analytics insight into how their content was being viewed and used. As well as creating interactive content generation tools for site visitors. An example of the CMS can be seen at mumbles.co.uk, more details of the site can be viewed at citys.info.</p>
-	  <p>Part of my role I was asked to liaise with customers via face to face meetings, over the telephone and via email. Through this placement I learnt valuable skills and made contacts which provided further</p>
+	  <p>I was initially hired to be a CSS developer for a range of small sites. However, during my placement I was asked to write a bespoke PHP based content management along with another developer. The CMS implemented several APIs including Google Maps, Custom Search, Paypal as well as other APIs from third party content providers. The role involved creating a public front end for the site, as customer back-end for the site, as well as a local business back-end for the site. I played a key role in developing the both the front and back-end of the site, offering local businesses analytics insight into how their content was being viewed and used. As well as creating interactive content generation tools for site visitors. An example of the CMS can be seen at mumbles.co.uk, more details of the site can be viewed at citys.info. Part of my role I was asked to liaise with customers via face to face meetings, over the telephone and via email.</p>
 	  <h3>Business Process Manager, <span class="employer">Maajad</span></h3>
 	  <p class="employment_dates">September 2005 - November 2005, Saar Kingdom of Bahrain</p>
 	  <p>After finishing my A-levels I was forced to take a gap year due to having surgery on my back. During part of this year I worked as an EMC<sup>2</sup> Documentum business process manager for a company in Bahrain. The role involved creating and testing business processes which were designed to increase productivity, reduce risks and reduce process cycle times within in large corporations using the EMC<sup>2</sup> Documentum software. The work consisted of organising and optimising large existing corporate business processes for fortune 500 companies.</p>
@@ -188,7 +243,6 @@
 	<p class="awards_awarding_body">Microsoft</p>
 	<p>I was part of a team of fellow students who entered the Microsoft Imagine cup in 2010. Beating off several other universities we made it to the national finals, which involved us presenting our ideas to judges at Microsoft’s Reading Campus. Microsoft’s Imagine Cup is one of the world’s most prestigious student technology competition, bringing together student innovators from all over the world.</p>
 
-	
 	<a name="Publications"></a>
 	<h2>Publications</h2>
 	<h3>Keyword Clouds: Having very little effect on sensemaking in web search engines.</h3>
@@ -249,10 +303,23 @@
 	<p>As well as the above technical skills. I have had experience running scientific experiments, and performing both qualitative and quantitative statistical analysis on data.</p>
 	<p>As part of my job and academic past, I have had to produce reports based on experiments as well as on progress made through out projects and against key results.</p>
 	<p>As part of my Ph.D. and masters, I have performed analysis on different types of datasets from semi-structured interviews, large crowdsourced studies (120,000+ responses), as well as measurable output from human performance tasks.</p>
+	<h2>Courses Attended:</h2>
+	<h3>Product Management Courses:</h3>
+	<p>Product Management Essentials - <i>Mind the Product</i></p>
+	<h3>General Management Courses:</h3>
+	<p>Buddy to Boss - <i>Mind Gym</i></p>
+	<p>Great Feedback - <i>Mind Gym</i></p>
+	<p>Influence and Persuade - <i>Mind Gym</i></p>
+	<p>Courageous Conversations - <i>Mind Gym</i></p>
+	<h3>Data Science Courses:</h3>
+	<p>HDP : Data Science - <i>Big Data Partnership</i></p>
+	<h3>Academic Courses and Workshops:</h3>
+	<p>Information Retrieval Challenges in Computational Advertising - <i>ACM CIKM / Yahoo! Research</i></p>
+	<p>Large-scale Information Retrieval Experimentation with Terrier - <i>ACM CIKM / University of Glasgow</i></p>
 	
 	<a name="References"></a>
 	<h2>References</h2>
-	<p>I am happy to provide references upon request.</p>
+	<p>References are avaliable upon request.</p>
 	
 	</body>
 </html>
